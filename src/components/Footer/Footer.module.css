@@ -1,0 +1,29 @@
+.background {
+  width: 100%;
+  background-color: #b7a986;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.payment {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

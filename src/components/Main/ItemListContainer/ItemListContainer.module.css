@@ -1,0 +1,10 @@
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px black;
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  width: 90%;
+}
