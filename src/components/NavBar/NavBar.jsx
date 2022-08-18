@@ -1,6 +1,6 @@
 import React from "react";
 import estilos from "./NavBar.module.css";
-import CartWidget from "./CartWidget/CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import logo from "./logo.png";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";

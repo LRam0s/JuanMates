@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nosotros = () => {
+const About = () => {
   return (
     <section className="d-flex justify-content-center">
       <div
@@ -19,7 +19,7 @@ const Nosotros = () => {
           hic consequuntur! Illum, quia!
         </p>
         <a
-          href=""
+          href="https://www.google.com.ar/"
           className="btn"
           style={{ backgroundColor: "#1A181B", color: "white" }}
         >
@@ -30,4 +30,4 @@ const Nosotros = () => {
   );
 };
 
-export default Nosotros;
+export default About;

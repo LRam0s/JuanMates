@@ -1,8 +1,8 @@
 import React from "react";
-import Carrousel from "./Carrousel/Carrousel";
-import Info from "./Info/Info";
+import Carrousel from "../Carrousel/Carrousel";
+import Info from "../Info/Info";
 import estilos from "./Main.module.css";
-import Nosotros from "./Nosotros/Nosotros";
+import About from "../About/About";
 
 const Main = () => {
   return (
@@ -10,7 +10,7 @@ const Main = () => {
       <section className={estilos.space}></section>
       <Carrousel />
       <Info />
-      <Nosotros />
+      <About />
     </main>
   );
 };
