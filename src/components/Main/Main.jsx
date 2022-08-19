@@ -3,6 +3,9 @@ import Carrousel from "../Carrousel/Carrousel";
 import Info from "../Info/Info";
 import estilos from "./Main.module.css";
 import About from "../About/About";
+import Gallery from "../Gallery/Gallery";
+import Faq from "../Faq/Faq";
+import Social from "../Social/Social";
 
 const Main = () => {
   return (
@@ -11,6 +14,9 @@ const Main = () => {
       <Carrousel />
       <Info />
       <About />
+      <Gallery />
+      <Faq />
+      <Social />
     </main>
   );
 };
