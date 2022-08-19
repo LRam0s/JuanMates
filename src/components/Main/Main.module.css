@@ -1,3 +1,15 @@
 .space {
   height: 125px;
 }
+
+.textAbout {
+  color: red;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.textFaq {
+  color: blue;
+  font-size: 20px;
+  border: 2px black;
+  border-radius: 10%;
+}
