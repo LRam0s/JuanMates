@@ -12,7 +12,7 @@ import estilos from "./Gallery.module.css";
 
 const Gallery = () => {
   return (
-    <section className="d-flex justify-content-center flex-column align-items-center gap2">
+    <section className="d-flex justify-content-center flex-column align-items-center gap-4">
       <div className={estilos.galleryContainer}>
         <img className={estilos.gItem0} src={gallery0} alt="" />
         <img className={estilos.gItem1} src={gallery1} alt="" />
