@@ -1,18 +1,11 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
+import estilos from "../NavBar/NavBar.module.css";
 
-const NavResponsive = ({
-  mateMenu,
-  links,
-  linksMateExtend,
-  logo,
-  cart,
-  toggleMenu,
-  menuExtend,
-}) => {
+const NavResponsive = ({ menuExtend, toggleMenu }) => {
   return (
-    <div className={mateMenu}>
-      <ul className={links}>
+    <div className={estilos.mateMenu}>
+      <ul className={estilos.links}>
         <img
           src="https://res.cloudinary.com/dpsc3qokx/image/upload/v1661265647/JuanMates/icons8-mate-50_guoo8e.png"
           alt=""
@@ -20,7 +13,7 @@ const NavResponsive = ({
           onClick={toggleMenu}
         />
         {menuExtend === true && (
-          <span className={linksMateExtend}>
+          <span className={estilos.linksMateExtend}>
             <li>
               <a href="https://www.google.com.ar/">Productos</a>
             </li>
@@ -36,13 +29,13 @@ const NavResponsive = ({
           </span>
         )}
       </ul>
-      <a href="https" className={logo}>
+      <a href="https" className={estilos.logo}>
         <img
           src="https://res.cloudinary.com/dpsc3qokx/image/upload/v1661265187/JuanMates/logo_k35yk0.png"
           alt="Logo de JuanMates Arg"
         />
       </a>
-      <ul className={cart}>
+      <ul className={estilos.cart}>
         <li>
           <CartWidget />
         </li>

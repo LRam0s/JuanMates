@@ -2,8 +2,7 @@
   width: 100%;
   background-color: #b7a986;
   display: flex;
-  position: absolute;
-  bottom: 0;
+  margin-top: 2rem;
 }
 
 .footer {

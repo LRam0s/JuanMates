@@ -12,15 +12,7 @@ const NavBar = () => {
 
   return (
     <nav className={estilos.navBar}>
-      <NavResponsive
-        mateMenu={estilos.mateMenu}
-        links={estilos.links}
-        linksMateExtend={estilos.linksMateExtend}
-        logo={estilos.logo}
-        cart={estilos.cart}
-        menuExtend={menuExtend}
-        toggleMenu={toggleMenu}
-      />
+      <NavResponsive menuExtend={menuExtend} toggleMenu={toggleMenu} />
       <div className={estilos.navExtend}>
         <ul className={estilos.links}>
           <li>
