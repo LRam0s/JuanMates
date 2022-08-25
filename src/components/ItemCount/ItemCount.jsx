@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../Button/Button";
 import estilos from "./ItemCount.module.css";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -22,9 +23,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           +
         </button>
       </span>
-      <button className={estilos.button} onClick={() => onAdd(count)}>
-        Agregar al carrito
-      </button>
+      <Button btnText="Agregar al carrito" fnButton={() => onAdd(count)} />
     </div>
   );
 };
