@@ -51,5 +51,3 @@ const mates = [
 ];
 
 export default mates;
-
-export const uniProd = mates.find((mate) => mate.id === 4);
