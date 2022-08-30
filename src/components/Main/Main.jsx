@@ -1,4 +1,5 @@
 import React from "react";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import estilos from "./Main.module.css";
 
@@ -12,7 +13,8 @@ const Main = () => {
           alt=""
         />
       </section>
-      <ItemListContainer text="Bienvenido a JuanMates, acá vas a poder encontrar los mejores productos al menor precio del mercado." />
+      <ItemListContainer />
+      <ItemDetailContainer />
     </main>
   );
 };
