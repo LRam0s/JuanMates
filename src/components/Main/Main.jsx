@@ -1,5 +1,6 @@
 import React from "react";
 import BoxText from "../BoxText/BoxText";
+import Carrousel from "../Carrousel/Carrousel";
 import Gallery from "../Gallery/Gallery";
 import Info from "../Info/Info";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
@@ -16,7 +17,8 @@ const Main = () => {
           alt=""
         />
       </section>
-      <ItemListContainer text="Bienvenido a JuanMates, acá vas a poder encontrar los mejores productos al menor precio del mercado." />
+      <ItemListContainer />
+      <Carrousel />
       <Info />
       <BoxText
         title="¿Quiénes somos?"

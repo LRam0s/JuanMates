@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.carrouselContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.carrouselImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.textContainer {
+  position: relative;
+  top: 110px;
+  font-size: 1.5em;
+}
+
+.carrouselImg {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  /* animation: carrouselImg ease 2s;
+  -webkit-animation: carrouselImg ease 2s; */
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+}
+polyline {
+  stroke: #0000004e;
+}
