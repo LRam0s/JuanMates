@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
 import estilos from "./ItemListContainer.module.css";
-import mates from "../../mock/mates";
+import productos from "../../mock/mates";
 import ItemList from "../ItemList/ItemList";
+import Category from "../Category/Category";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
+
+  const { id } = useParams();
+
   useEffect(() => {
     const getProducts = new Promise((res, rej) => {
+      const prodFilter = productos.filter((prod) => prod.category === id);
       setTimeout(() => {
-        res(mates);
+        res(id ? prodFilter : productos);
       }, 2000);
     });
     getProducts
@@ -17,14 +23,12 @@ const ItemListContainer = () => {
       })
       .catch((error) => {
         console.log("error", error);
-      })
-      .finally(() =>
-        console.log("Se renderizado los productos de manera correcta")
-      );
-  }, []);
+      });
+  }, [id]);
 
   return (
     <section className={estilos.text}>
+      <Category />
       <ItemList items={items} />
     </section>
   );

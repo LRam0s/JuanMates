@@ -2,6 +2,7 @@ import React from "react";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import estilos from "./Main.module.css";
+import { Route, Routes } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -13,8 +14,11 @@ const Main = () => {
           alt=""
         />
       </section>
-      <ItemListContainer />
-      <ItemDetailContainer />
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:id" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+      </Routes>
     </main>
   );
 };
