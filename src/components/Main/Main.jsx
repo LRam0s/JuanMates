@@ -1,37 +1,26 @@
 import React from "react";
-import BoxText from "../BoxText/BoxText";
-import Carrousel from "../Carrousel/Carrousel";
-import Gallery from "../Gallery/Gallery";
-import Info from "../Info/Info";
+import Home from "../Home/Home";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
-import SocialMedia from "../SocialMedia/SocialMedia";
-import estilos from "./Main.module.css";
+import Cart from "../Cart/Cart";
+import Faq from "../FAQ/Faq";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
+import { Route, Routes } from "react-router-dom";
 
 const Main = () => {
   return (
     <main>
-      <section className={estilos.space}>
-        <img
-          className={estilos.logo}
-          src="https://res.cloudinary.com/dpsc3qokx/image/upload/v1661265187/JuanMates/logo_k35yk0.png"
-          alt=""
-        />
-      </section>
-      <ItemListContainer />
-      <Carrousel />
-      <Info />
-      <BoxText
-        title="¿Quiénes somos?"
-        text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit dolore inventore beatae accusantium hic quos excepturi iure omnis modi odio ad? Rerum quisquam exercitationem voluptatem natus perferendis provident libero officia?"
-        btnText="Ver más..."
-      />
-      <Gallery />
-      <BoxText
-        title="Preguntas frecuentes"
-        text="Información sobre los mates personalizados, políticas de cambio de producto, tamaños de mates, modo de envíos y entregas, curado de mates, información para mayoristas. Todas esas respuestas y muchas más vas a encontrar en esta sección. Perfecto para quién quiere sacarse todas las dudas antes de comprar."
-        btnText="Conocé las respuestas"
-      />
-      <SocialMedia />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ItemListContainer />} />
+        <Route path="/products/category/:id" element={<ItemListContainer />} />
+        <Route path="/products/item/:id" element={<ItemDetailContainer />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </main>
   );
 };

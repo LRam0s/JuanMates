@@ -1,11 +1,12 @@
 import React from "react";
 import estilos from "./Button.module.css";
 
-const Button = ({ btnText, fnButton }) => {
+//ACA ES EL PROBLEMA DEL LINK; ESTO DEBERIA VER COMO CARAJO LO ARREGLO
+
+const Button = ({ btnText, fnButton, link }) => {
   return (
     <div>
       <button className={estilos.button} onClick={fnButton}>
-        {" "}
         {btnText}
       </button>
     </div>

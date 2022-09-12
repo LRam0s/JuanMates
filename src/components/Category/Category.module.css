@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.6em;
+  padding: 2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #b7a986;
+}

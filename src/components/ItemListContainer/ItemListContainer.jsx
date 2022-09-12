@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
-import ItemCount from "../ItemCount/ItemCount";
 import estilos from "./ItemListContainer.module.css";
-import mates from "../../mock/mates";
+import productos from "../../mock/mates";
 import ItemList from "../ItemList/ItemList";
+import Category from "../Category/Category";
+import { useParams } from "react-router-dom";
+import Space from "../Space/Space";
 
 const ItemListContainer = () => {
-  const onAdd = (cant) => {
-    cant === 1
-      ? alert(`Se agregó ${cant} producto al carrito`)
-      : alert(`Se agregaron ${cant} productos al carrito`);
-  };
-
   const [items, setItems] = useState([]);
+
+  const { id } = useParams();
+
   useEffect(() => {
     const getProducts = new Promise((res, rej) => {
+      const prodFilter = productos.filter((prod) => prod.category === id);
       setTimeout(() => {
-        res(mates);
+        res(id ? prodFilter : productos);
       }, 2000);
     });
     getProducts
@@ -24,16 +24,14 @@ const ItemListContainer = () => {
       })
       .catch((error) => {
         console.log("error", error);
-      })
-      .finally(() =>
-        console.log("Se renderizado los productos de manera correcta")
-      );
-  }, []);
+      });
+  }, [id]);
 
   return (
     <section className={estilos.text}>
+      <Space />
+      <Category />
       <ItemList items={items} />
-      <ItemCount stock={10} initial={1} onAdd={onAdd} />
     </section>
   );
 };

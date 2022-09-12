@@ -52,7 +52,7 @@ const Gallery = () => {
           className={estilos.gItem8}
         />
       </div>
-      <Button btnText="Ver todos los productos" />
+      <Button btnText="Ver todos los productos" /* link="/products" */ />
     </section>
   );
 };
