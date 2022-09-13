@@ -10,7 +10,7 @@ const CartProvider = ({ children }) => {
     if (isInCart(item.id)) {
       const newCart = cart.map((itemCart) => {
         if (itemCart.id === item.id) {
-          return { ...item, cantidad: itemCart.cantidad + cantidad };
+          return { ...item, cantidad: cantidad };
         } else {
           return itemCart;
         }
@@ -39,11 +39,39 @@ const CartProvider = ({ children }) => {
   };
 
   //calcular total de unidades en el cartwidget
-
+  const itemWidget = () => {
+    let aux = 0;
+    cart.forEach((prod) => {
+      aux += prod.cantidad;
+    });
+    return aux;
+  };
   //calcular total precio
+  const totalPrice = () => {
+    let aux = 0;
+    cart.forEach((prod) => {
+      aux += prod.cantidad * prod.price;
+    });
+    return aux;
+  };
+
+  const getProductQuantity = (id) => {
+    const product = cart.find((prod) => prod.id === id);
+    return product?.cantidad;
+  };
 
   return (
-    <CartContext.Provider value={{ cart, addItem, clear, removeItem }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addItem,
+        clear,
+        removeItem,
+        totalPrice,
+        itemWidget,
+        getProductQuantity,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

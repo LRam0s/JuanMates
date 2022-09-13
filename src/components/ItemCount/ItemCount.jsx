@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import estilos from "./ItemCount.module.css";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(initial);
+
+  useEffect(() => {
+    setCount(initial);
+  }, [initial]);
 
   const itemPlus = () => {
-    count < stock ? setCount(count + 1) : alert("Stock máximo");
+    count < stock && setCount(count + 1);
   };
   const itemMinus = () => {
-    count > initial && setCount(count - 1);
+    setCount(count - 1);
   };
 
   return (
