@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import estilos from "./ItemCount.module.css";
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial = 1, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   useEffect(() => {
