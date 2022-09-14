@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import estilos from "./ItemListContainer.module.css";
-import productos from "../../mock/mates";
+/* import productos from "../../mock/mates"; */
 import ItemList from "../ItemList/ItemList";
 import Category from "../Category/Category";
 import { useParams } from "react-router-dom";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { dataBase } from "../../firebaseConfig";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -13,24 +15,26 @@ const ItemListContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const getProducts = new Promise((res, rej) => {
-      const prodFilter = productos.filter((prod) => prod.category === id);
-      setTimeout(() => {
-        res(id ? prodFilter : productos);
-      }, 2000);
-    });
-    getProducts
-      .then((data) => {
-        setItems(data);
-        setIsLoading(false);
+    const itemCollections = collection(dataBase, "productos");
+    const filter = query(itemCollections, where("category", "==", `${id}`));
+    const itemList = id ? filter : itemCollections;
+
+    getDocs(itemList)
+      .then((res) => {
+        const products = res.docs.map((prod) => {
+          return {
+            id: prod.id,
+            ...prod.data(),
+          };
+        });
+        setItems(products);
       })
       .catch((error) => {
-        console.log("error", error);
+        console.log(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
-
-    return () => {
-      setIsLoading(true);
-    };
   }, [id]);
 
   return (
