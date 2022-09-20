@@ -5,9 +5,39 @@ import estilos from "./Cart.module.css";
 import Button from "../Button/Button";
 import { BsTrash } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Form from "../Form/Form";
+import { useState } from "react";
 
 const Cart = () => {
+  const [idCompra, setIdCompra] = useState("");
+  const [formOpen, setFormOpen] = useState(false);
   const { cart, clear, removeItem, totalPrice } = useContext(CartContext);
+
+  const total = totalPrice();
+
+  const mostrarForm = () => {
+    setFormOpen(true);
+  };
+
+  const handleId = (id) => {
+    setIdCompra(id);
+  };
+
+  if (formOpen && idCompra === "") {
+    return <Form cart={cart} total={total} clear={clear} handleId={handleId} />;
+  } else if (formOpen && idCompra) {
+    return (
+      <section style={{ display: "flex", justifyContent: "center" }}>
+        <div className={estilos.finally}>
+          <p style={{ fontSize: "30px" }}>¡Gracias por su compra!</p>
+          <p style={{ fontSize: "30px" }}>
+            El id de la transacción es: {idCompra}
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className={estilos.container}>
       {cart.map((item) => {
@@ -47,6 +77,7 @@ const Cart = () => {
                 <Button btnText="Seguir comprando" />
               </Link>
               <Button btnText="Borrar carrito" fnButton={clear} />
+              <Button btnText="Finalizar compra" fnButton={mostrarForm} />
             </span>
           </div>
         </>
