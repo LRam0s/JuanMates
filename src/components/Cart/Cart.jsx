@@ -5,8 +5,8 @@ import estilos from "./Cart.module.css";
 import Button from "../Button/Button";
 import { BsTrash } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import Form from "../Form/Form";
 import { useState } from "react";
+import FormContainer from "../FormContainer/FormContainer";
 
 const Cart = () => {
   const [idCompra, setIdCompra] = useState("");
@@ -24,7 +24,14 @@ const Cart = () => {
   };
 
   if (formOpen && idCompra === "") {
-    return <Form cart={cart} total={total} clear={clear} handleId={handleId} />;
+    return (
+      <FormContainer
+        cart={cart}
+        total={total}
+        clear={clear}
+        handleId={handleId}
+      />
+    );
   } else if (formOpen && idCompra) {
     return (
       <section style={{ display: "flex", justifyContent: "center" }}>

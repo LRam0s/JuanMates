@@ -1,68 +1,27 @@
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import React, { useState } from "react";
-import { dataBase } from "../../firebaseConfig";
-import Button from "../Button/Button";
+import React from "react";
 import estilos from "./Form.module.css";
+import Button from "../Button/Button";
 
-const Form = ({ cart, total, clear, handleId }) => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [direccion, setDireccion] = useState("");
-  const [postal, setPostal] = useState("");
-  const [pago, setPago] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const order = {
-      buyer: {
-        name: name,
-        phone: phone,
-        email: email,
-        direccion: direccion,
-        postal: postal,
-        pago: pago,
-      },
-      items: cart,
-      total: total,
-      date: serverTimestamp(),
-    };
-
-    const ordersCollection = collection(dataBase, "orders");
-
-    addDoc(ordersCollection, order).then((res) => {
-      handleId(res.id);
-      clear();
-    });
-  };
-
-  const handleChangeName = (event) => {
-    setName(event.target.value);
-  };
-
-  const handleChangePhone = (event) => {
-    setPhone(event.target.value);
-  };
-
-  const handleChangeEmail = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handleChangeDireccion = (event) => {
-    setDireccion(event.target.value);
-  };
-
-  const handleChangePostal = (event) => {
-    setPostal(event.target.value);
-  };
-
-  const handleChangePago = (event) => {
-    setPago(event.target.value);
-  };
-
+const Form = ({
+  name,
+  phone,
+  email1,
+  email2,
+  direccion,
+  postal,
+  pago,
+  handleChangeName,
+  handleChangePhone,
+  handleChangeEmail1,
+  handleChangeEmail2,
+  handleChangeDireccion,
+  handleChangePostal,
+  handleChangePago,
+  validateForm,
+}) => {
   return (
     <section style={{ display: "flex", justifyContent: "center" }}>
-      <form action="" onSubmit={handleSubmit} className={estilos.container}>
+      <form action="" onSubmit={validateForm} className={estilos.container}>
         <h2>Formulario de compra</h2>
         <div className={estilos.campos}>
           <label htmlFor="nombre">Ingrese su nombre: </label>
@@ -86,9 +45,20 @@ const Form = ({ cart, total, clear, handleId }) => {
           <label htmlFor="email">Ingrese su correo electrónico: </label>
           <input
             type="email"
-            name="email"
-            value={email}
-            onChange={handleChangeEmail}
+            name="email1"
+            value={email1}
+            onChange={handleChangeEmail1}
+          />
+        </div>
+        <div className={estilos.campos}>
+          <label htmlFor="email">
+            Introduzca nuevamente su correo electrónico:{" "}
+          </label>
+          <input
+            type="email"
+            name="email2"
+            value={email2}
+            onChange={handleChangeEmail2}
           />
         </div>
         <div className={estilos.campos}>
@@ -114,9 +84,7 @@ const Form = ({ cart, total, clear, handleId }) => {
         <div className={estilos.campos}>
           <label htmlFor="pago">Seleccione su metodo de pago: </label>
           <select name="pago" value={pago} onChange={handleChangePago}>
-            <option value="" disabled>
-              --Seleccione una opción--
-            </option>
+            <option defaultValue="">--Seleccione una opción--</option>
             <option value="credito">Tarjeta de Crédito</option>
             <option value="debito">Tarjeta de Débito</option>
             <option value="paypal">Paypal</option>
