@@ -4,6 +4,7 @@ import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import estilos from "./Main.module.css";
 import { Route, Routes } from "react-router-dom";
 import Cart from "../Cart/Cart";
+import { ToastContainer } from "react-toastify";
 
 const Main = () => {
   return (
@@ -15,6 +16,17 @@ const Main = () => {
           alt=""
         />
       </section>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+      />
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/category/:id" element={<ItemListContainer />} />

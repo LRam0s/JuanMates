@@ -1,5 +1,6 @@
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { dataBase } from "../../firebaseConfig";
 import Form from "../Form/Form";
 
@@ -12,13 +13,31 @@ const FormContainer = ({ cart, total, clear, handleId }) => {
   const [postal, setPostal] = useState("");
   const [pago, setPago] = useState("");
 
+  const notifyMail = () =>
+    toast.error("No coinciden los correos electrónicos proporcionados.", {
+      theme: "dark",
+    });
+  const notifyEmpty = () =>
+    toast.error("Debes completar todos los campos para continuar.", {
+      theme: "dark",
+    });
+
+  const validate =
+    name === "" ||
+    phone === "" ||
+    email1 === "" ||
+    email2 === "" ||
+    direccion === "" ||
+    postal === "" ||
+    pago === "";
+
   const validateForm = (event) => {
     event.preventDefault();
-    if (email1 === email2) {
-      if (pago === "") {
-        alert("Tenes que elegir un metodo de pago valido");
-      } else handleSubmit();
-    } else alert("No coinciden los correos electrónicos");
+    if (!validate) {
+      if (email1 === email2) {
+        handleSubmit();
+      } else notifyMail();
+    } else notifyEmpty();
   };
   const handleSubmit = () => {
     const order = {
