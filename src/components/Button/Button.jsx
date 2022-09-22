@@ -1,9 +1,7 @@
 import React from "react";
 import estilos from "./Button.module.css";
 
-//ACA ES EL PROBLEMA DEL LINK; ESTO DEBERIA VER COMO CARAJO LO ARREGLO
-
-const Button = ({ btnText, fnButton, link }) => {
+const Button = ({ btnText, fnButton }) => {
   return (
     <div>
       <button className={estilos.button} onClick={fnButton}>

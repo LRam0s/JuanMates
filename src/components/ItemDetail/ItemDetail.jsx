@@ -5,18 +5,27 @@ import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
 import estilos from "./ItemDetail.module.css";
 import { CartContext } from "../../context/CartContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ItemDetail = ({ items }) => {
   const [cantidad, setCantidad] = useState(0);
-  const { addItem } = useContext(CartContext);
+  const { addItem, getProductQuantity } = useContext(CartContext);
 
   const onAdd = (cant) => {
     setCantidad(cant);
     addItem(items, cant);
-    cant === 1
-      ? alert(`Se agregó ${cant} ${items.title} al carrito`)
-      : alert(`Se agregaron ${cant} ${items.title} al carrito`);
+    const notify = () =>
+      toast.success(
+        cant === 1
+          ? `Se agregó ${cant} ${items.title} al carrito.`
+          : `Se han agregado ${cant} ${items.title} al carrito`,
+        { theme: "dark" }
+      );
+    notify();
   };
+
+  const quantity = getProductQuantity(items.id);
 
   return (
     <section className={estilos.container}>
@@ -30,11 +39,16 @@ const ItemDetail = ({ items }) => {
           <p>$ {items.price}</p>
 
           {cantidad === 0 ? (
-            <ItemCount stock={items.stock} initial={1} onAdd={onAdd} />
+            <ItemCount stock={items.stock} initial={quantity} onAdd={onAdd} />
           ) : (
-            <Link to="/cart">
-              <Button btnText="Ir al carrito" />
-            </Link>
+            <>
+              <Link to="/products">
+                <Button btnText="Seguir comprando" />
+              </Link>
+              <Link to="/cart">
+                <Button btnText="Ir al carrito" />
+              </Link>
+            </>
           )}
         </div>
       </article>

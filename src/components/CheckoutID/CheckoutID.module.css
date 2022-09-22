@@ -1,0 +1,10 @@
+.finally {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px #b7a986;
+  border-radius: 10px;
+  max-width: 1000px;
+  padding: 2rem;
+}

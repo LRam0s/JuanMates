@@ -5,9 +5,9 @@ import { NavLink } from "react-router-dom";
 const Category = () => {
   return (
     <section className={estilos.container}>
-      <NavLink to="/category/mates"> Mates </NavLink>
-      <NavLink to="/category/termos"> Termos </NavLink>
-      <NavLink to="/category/bombillas"> Bombillas </NavLink>
+      <NavLink to="/products/category/mates"> Mates </NavLink>
+      <NavLink to="/products/category/termos"> Termos </NavLink>
+      <NavLink to="/products/category/bombillas"> Bombillas </NavLink>
     </section>
   );
 };

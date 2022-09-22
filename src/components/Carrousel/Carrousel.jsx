@@ -65,4 +65,3 @@ const Carrousel = (autoPlay = true) => {
 };
 
 export default Carrousel;
-//VER COMO CARAJO HACER FADE DE TODAS LAS TARJETAS CADA VEZ QUE LAS TENGO QUE CAMBIAR

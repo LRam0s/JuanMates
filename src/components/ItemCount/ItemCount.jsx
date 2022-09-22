@@ -1,15 +1,18 @@
-import React, { useState } from "react";
-import Button from "../Button/Button";
+import React, { useState, useEffect } from "react";
 import estilos from "./ItemCount.module.css";
 
-const ItemCount = ({ stock, initial, onAdd }) => {
-  const [count, setCount] = useState(1);
+const ItemCount = ({ stock, initial = 1, onAdd }) => {
+  const [count, setCount] = useState(initial);
+
+  useEffect(() => {
+    setCount(initial);
+  }, [initial]);
 
   const itemPlus = () => {
-    count < stock ? setCount(count + 1) : alert("Stock máximo");
+    count < stock && setCount(count + 1);
   };
   const itemMinus = () => {
-    count > initial && setCount(count - 1);
+    setCount(count - 1);
   };
 
   return (
@@ -23,7 +26,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           +
         </button>
       </span>
-      <Button btnText="Agregar al carrito" fnButton={() => onAdd(count)} />
+      <button className={estilos.button} onClick={() => onAdd(count)}>
+        Agregar al carrito
+      </button>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const BoxText = ({ title, text, btnText, link }) => {
       <div className={estilos.boxText}>
         <h2>{title}</h2>
         <p>{text}</p>
-        <Button btnText={btnText} /* link={link} */ />
+        <Button btnText={btnText} />
       </div>
     </section>
   );

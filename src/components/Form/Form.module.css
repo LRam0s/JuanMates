@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: solid 3px #b7a986;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 500px;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}

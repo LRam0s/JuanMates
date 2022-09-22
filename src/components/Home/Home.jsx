@@ -4,13 +4,10 @@ import Carrousel from "../Carrousel/Carrousel";
 import Gallery from "../Gallery/Gallery";
 import Info from "../Info/Info";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import Space from "../Space/Space";
-/* import { Link } from "react-router-dom"; */
 
 const Home = () => {
   return (
     <>
-      <Space />
       <Carrousel />
       <Info />
       <BoxText
