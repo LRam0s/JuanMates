@@ -1,9 +1,9 @@
 ## Tabla de contenidos
 
-1. [Información General](#Información General)
+1. [Información General](#Información_General)
 2. [Deployment](#Deployment)
 3. [Librerias](#Librerias)
-4. [Instalación local](#Instalación local)
+4. [Instalación local](#Instalación_local)
 
 ### Información General
 
