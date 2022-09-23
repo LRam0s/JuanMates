@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import estilos from "./Gallery.module.css";
 
@@ -52,7 +53,9 @@ const Gallery = () => {
           className={estilos.gItem8}
         />
       </div>
-      <Button btnText="Ver todos los productos" /* link="/products" */ />
+      <Link to="/products">
+        <Button btnText="Ver todos los productos" />
+      </Link>
     </section>
   );
 };

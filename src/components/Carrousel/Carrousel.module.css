@@ -1,7 +1,6 @@
 .container {
   display: flex;
   justify-content: center;
-  /* padding: 2rem; */
 }
 .carrouselContainer {
   display: flex;
@@ -21,16 +20,24 @@
 
 .textContainer {
   position: relative;
-  top: 110px;
   font-size: 1.5em;
+  color: black;
+  border-bottom: solid 2px #b7a986;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.textContainer h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .carrouselImg {
   max-width: 420px;
   width: 100%;
   height: auto;
-  /* animation: carrouselImg ease 2s;
-  -webkit-animation: carrouselImg ease 2s; */
+  max-height: 426px;
 }
 
 .button {

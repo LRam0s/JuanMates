@@ -127,6 +127,42 @@ const productos = [
     category: "bombillas",
     img: "https://res.cloudinary.com/dpsc3qokx/image/upload/v1662401515/JuanMates/Bombillas/bombilla5_i0vipg.jpg",
   },
+  {
+    title: "Canasta madera eco cuero",
+    description:
+      "Canasta matera de eco cuero, de dos cuerpos con madera de separados, especial para llevar en el auto.",
+    price: 3900,
+    stock: 10,
+    category: "canastas",
+    img: "https://res.cloudinary.com/dpsc3qokx/image/upload/v1663936404/JuanMates/Canastas/canasta4_ny0jei.jpg",
+  },
+  {
+    title: "Canasta eco cuero chica",
+    description:
+      "Canasta matera eco cuero chica. Ideal para llevarla a todos lados.",
+    price: 2640,
+    stock: 10,
+    category: "canastas",
+    img: "https://res.cloudinary.com/dpsc3qokx/image/upload/v1663936404/JuanMates/Canastas/canasta3_v6bk2m.jpg",
+  },
+  {
+    title: "Matera eco cuero",
+    description:
+      "Canasta matera de eco cuero. Tiene el tamaño ideal para guardar todo lo que necesitas para un buen mate.",
+    price: 3840,
+    stock: 10,
+    category: "canastas",
+    img: "https://res.cloudinary.com/dpsc3qokx/image/upload/v1663936404/JuanMates/Canastas/canasta1_ck74rj.jpg",
+  },
+  {
+    title: "Canasta Cuero",
+    description:
+      "Canasta matera de cuero. Por la calidad del cuero, es una compra que te va a durar toda la vida.",
+    price: 5760,
+    stock: 10,
+    category: "canastas",
+    img: "https://res.cloudinary.com/dpsc3qokx/image/upload/v1663936404/JuanMates/Canastas/canasta2_qy9b2d.jpg",
+  },
 ];
 
 export default productos;

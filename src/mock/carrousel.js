@@ -22,3 +22,5 @@ const canastas = [
 export const images = [mates, bombillas, termos, canastas];
 
 export const title = ["Mates", "Bombillas", "Termos", "Canasta matera"];
+
+export const link = ["mates", "bombillas", "termos", "canastas"];

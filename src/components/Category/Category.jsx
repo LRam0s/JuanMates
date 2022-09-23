@@ -8,6 +8,7 @@ const Category = () => {
       <NavLink to="/products/category/mates"> Mates </NavLink>
       <NavLink to="/products/category/termos"> Termos </NavLink>
       <NavLink to="/products/category/bombillas"> Bombillas </NavLink>
+      <NavLink to="/products/category/canastas"> Canastas Materas </NavLink>
     </section>
   );
 };
