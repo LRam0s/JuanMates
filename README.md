@@ -17,7 +17,8 @@ En esta tienda podrán encontrar todos los productos que un amante de los mates 
 ## Deployment
 
 Puede ingresar a la aplicación ingresando al siguiente link:
-[JuanMates Arg](PONER EL LINK DE NETLIFY)
+[JuanMates Arg](https://juanmatesarg.netlify.app/)
+
 Vistas:
 
 - Home: Se encuentra la pantalla de inicio de la aplicación, podrán acceder a las diferentes vistas desde aquí o desde el navBar.
