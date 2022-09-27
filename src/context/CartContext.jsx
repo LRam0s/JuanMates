@@ -38,7 +38,6 @@ const CartProvider = ({ children }) => {
     return validate;
   };
 
-  //calcular total de unidades en el cartwidget
   const itemWidget = () => {
     let aux = 0;
     cart.forEach((prod) => {
@@ -46,7 +45,6 @@ const CartProvider = ({ children }) => {
     });
     return aux;
   };
-  //calcular total precio
   const totalPrice = () => {
     let aux = 0;
     cart.forEach((prod) => {

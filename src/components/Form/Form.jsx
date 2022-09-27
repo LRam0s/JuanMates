@@ -24,10 +24,10 @@ const Form = ({
       <form action="" onSubmit={validateForm} className={estilos.container}>
         <h2>Formulario de compra</h2>
         <div className={estilos.campos}>
-          <label htmlFor="nombre">Ingrese su nombre: </label>
+          <label htmlFor="name">Ingrese su nombre: </label>
           <input
             type="text"
-            name="nombre"
+            name="name"
             value={name}
             onChange={handleChangeName}
           />
@@ -42,7 +42,7 @@ const Form = ({
           />
         </div>
         <div className={estilos.campos}>
-          <label htmlFor="email">Ingrese su correo electrónico: </label>
+          <label htmlFor="email1">Ingrese su correo electrónico: </label>
           <input
             type="email"
             name="email1"
@@ -51,8 +51,8 @@ const Form = ({
           />
         </div>
         <div className={estilos.campos}>
-          <label htmlFor="email">
-            Introduzca nuevamente su correo electrónico:{" "}
+          <label htmlFor="email2">
+            Introduzca nuevamente su correo electrónico:
           </label>
           <input
             type="email"
@@ -63,7 +63,7 @@ const Form = ({
         </div>
         <div className={estilos.campos}>
           <label htmlFor="direccion">
-            Ingrese el domicilio al cual se enviará el producto:{" "}
+            Ingrese el domicilio al cual se enviará el producto:
           </label>
           <input
             type="text"

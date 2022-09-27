@@ -16,11 +16,11 @@ const NavBar = () => {
       <NavResponsive menuExtend={menuExtend} toggleMenu={toggleMenu} />
       <div className={estilos.navExtend}>
         <ul className={estilos.links}>
-          <li>
-            <Link to="/"> Productos </Link>
+          <li className={estilos.link}>
+            <Link to="/products"> Productos </Link>
           </li>
-          <li>
-            <Link to="/"> Preguntas frecuentess </Link>
+          <li className={estilos.link}>
+            <Link to="/faq"> Preguntas frecuentess </Link>
           </li>
           <Link to="/" className={estilos.logo}>
             {" "}
@@ -29,16 +29,16 @@ const NavBar = () => {
               alt="Logo de JuanMates Arg"
             />{" "}
           </Link>
-          <li>
-            <Link to="/"> Nosotros </Link>
+          <li className={estilos.link}>
+            <Link to="/about"> Nosotros </Link>
           </li>
-          <li>
-            <Link to="/"> Contacto </Link>
+          <li className={estilos.link}>
+            <Link to="/contact"> Contacto </Link>
           </li>
         </ul>
         <ul className={estilos.cart}>
           <li>
-            <Link to="/">
+            <Link to="/cart">
               {" "}
               <CartWidget />{" "}
             </Link>

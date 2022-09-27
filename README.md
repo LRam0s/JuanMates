@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+## Tabla de contenidos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. [Información General](#Información_General)
+2. [Deployment](#Deployment)
+3. [Librerias](#Librerias)
+4. [Instalación local](#Instalación_local)
 
-## Available Scripts
+### Información General
 
-In the project directory, you can run:
+---
 
-### `npm start`
+![](https://res.cloudinary.com/dpsc3qokx/image/upload/v1661265187/JuanMates/logo_k35yk0.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+La aplicación web de JuanMates Arg es un Ecommerce que ha sido realizado con React JS en el curso homónimo de Coderhouse.
+En esta tienda podrán encontrar todos los productos que un amante de los mates necesita, desde termos personalizados hasta canastas materas en las cuales llevar todos los productos. Podrán navegar por las diferentes vistas que componen la aplicación, tales como el home, la sección de productos, de preguntas frecuentes, de contacto y de sobre Nosotros.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployment
 
-### `npm test`
+Puede ingresar a la aplicación ingresando al siguiente link:
+[JuanMates Arg](PONER EL LINK DE NETLIFY)
+Vistas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Home: Se encuentra la pantalla de inicio de la aplicación, podrán acceder a las diferentes vistas desde aquí o desde el navBar.
+- Productos: Se encuentran todos los productos página, se puede filtrar por categoría y seleccionar el que desea para ingresar al detalle del mismo y poder agregar la cantidad que quiera al carrito.
+- Preguntas frecuentes: Se encuentran las preguntas frecuentes junto con los términos y condiciones de la página.
+- Nosotros: Se informa como se creo la marca, donde se encuentra y cuales son sus objetivos.
+- Contacto: Se encuentra un formulario de contacto en el cual se puede enviar la consulta que luego sera contestada vía mail. También se encuentran las redes.
+- Carrito: Se encuentran los productos que se agregaron y se realiza la compra.
 
-### `npm run build`
+## Librerias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [React-router-dom](https://github.com/remix-run/react-router#readme): Version 6.3.0
+- [React-icons](https://react-icons.github.io/react-icons/): Version 4.4.0
+- [React-spinners](https://www.davidhu.io/react-spinners/): Version 0.13.4
+- [React-toastify](https://fkhadra.github.io/react-toastify/introduction/): Version 9.0.8
+- [Firebase](https://firebase.google.com/): Version 9.9.4
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalación local
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+$ git clone https://github.com/LRam0s/JuanMates.git
+$ npm install
+$ npm start
+```

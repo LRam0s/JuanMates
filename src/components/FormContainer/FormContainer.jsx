@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { dataBase } from "../../firebaseConfig";
 import Form from "../Form/Form";
+import Space from "../Space/Space";
 
 const FormContainer = ({ cart, total, clear, handleId }) => {
   const [name, setName] = useState("");
@@ -89,23 +90,26 @@ const FormContainer = ({ cart, total, clear, handleId }) => {
     setPago(event.target.value);
   };
   return (
-    <Form
-      name={name}
-      phone={phone}
-      email1={email1}
-      email2={email2}
-      direccion={direccion}
-      postal={postal}
-      pago={pago}
-      handleChangeName={handleChangeName}
-      handleChangePhone={handleChangePhone}
-      handleChangeEmail1={handleChangeEmail1}
-      handleChangeEmail2={handleChangeEmail2}
-      handleChangeDireccion={handleChangeDireccion}
-      handleChangePostal={handleChangePostal}
-      handleChangePago={handleChangePago}
-      validateForm={validateForm}
-    />
+    <>
+      <Space />
+      <Form
+        name={name}
+        phone={phone}
+        email1={email1}
+        email2={email2}
+        direccion={direccion}
+        postal={postal}
+        pago={pago}
+        handleChangeName={handleChangeName}
+        handleChangePhone={handleChangePhone}
+        handleChangeEmail1={handleChangeEmail1}
+        handleChangeEmail2={handleChangeEmail2}
+        handleChangeDireccion={handleChangeDireccion}
+        handleChangePostal={handleChangePostal}
+        handleChangePago={handleChangePago}
+        validateForm={validateForm}
+      />
+    </>
   );
 };
 

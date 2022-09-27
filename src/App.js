@@ -6,13 +6,15 @@ import CartProvider from "./context/CartContext";
 
 function App() {
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <Header />
-        <Main />
-        <Footer />
-      </BrowserRouter>
-    </CartProvider>
+    <>
+      <CartProvider>
+        <BrowserRouter>
+          <Header />
+          <Main />
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
+    </>
   );
 }
 

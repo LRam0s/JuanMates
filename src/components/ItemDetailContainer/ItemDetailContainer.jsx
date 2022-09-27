@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-/* import mates from "../../mock/mates"; */
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import estilos from "./ItemDetailContainer.module.css";
 import { dataBase } from "../../firebaseConfig";
 import { doc, getDoc, collection } from "firebase/firestore";
+import Space from "../Space/Space";
 
 const ItemDetailContainer = () => {
   const [items, setItems] = useState({});
@@ -32,11 +32,17 @@ const ItemDetailContainer = () => {
     <>
       {isLoading ? (
         <div className={estilos.loading}>
+          <Space />
+
           <PropagateLoader color="#2b2b2b" />
           <p>Cargando..</p>
         </div>
       ) : (
-        <ItemDetail items={items} />
+        <>
+          <Space />
+
+          <ItemDetail items={items} />
+        </>
       )}
     </>
   );

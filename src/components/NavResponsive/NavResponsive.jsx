@@ -16,25 +16,26 @@ const NavResponsive = ({ menuExtend, toggleMenu }) => {
         {menuExtend === true && (
           <span className={estilos.linksMateExtend}>
             <li>
-              <Link to="/">Productos</Link>
+              <Link to="/products"> Productos </Link>
             </li>
             <li>
-              <Link to="/">Preguntas frecuentes </Link>
+              <Link to="/faq"> Preguntas frecuentess </Link>
             </li>
             <li>
-              <Link to="/"> Nosotros </Link>
+              <Link to="/about"> Nosotros </Link>
             </li>
             <li>
-              <Link to="/">Contacto</Link>
+              <Link to="/contact"> Contacto </Link>
             </li>
           </span>
         )}
       </ul>
       <Link to="/" className={estilos.logo}>
+        {" "}
         <img
           src="https://res.cloudinary.com/dpsc3qokx/image/upload/v1661265187/JuanMates/logo_k35yk0.png"
           alt="Logo de JuanMates Arg"
-        />
+        />{" "}
       </Link>
       <ul className={estilos.cart}>
         <li>

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+.about1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 1400px;
+  gap: 3rem;
+  border-bottom: solid 2px whitesmoke;
+  padding: 2rem;
+}
+
+.about2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 1400px;
+  gap: 3rem;
+  border-bottom: solid 2px whitesmoke;
+  padding: 2rem;
+}
+
+.text {
+  max-width: 700px;
+  font-size: 1.2rem;
+}
+.title {
+  display: flex;
+  justify-content: center;
+}

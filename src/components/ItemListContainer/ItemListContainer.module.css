@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid 2px black;
   margin-inline: 50px;
 }
 .loading {

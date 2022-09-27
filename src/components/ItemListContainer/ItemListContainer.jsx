@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import estilos from "./ItemListContainer.module.css";
-/* import productos from "../../mock/mates"; */
 import ItemList from "../ItemList/ItemList";
 import Category from "../Category/Category";
 import { useParams } from "react-router-dom";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { dataBase } from "../../firebaseConfig";
+import Space from "../Space/Space";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -41,11 +41,13 @@ const ItemListContainer = () => {
     <section className={estilos.text}>
       {isLoading ? (
         <div className={estilos.loading}>
+          <Space />
           <PropagateLoader color="#2b2b2b" />
           <p>Cargando..</p>
         </div>
       ) : (
         <>
+          <Space />
           <Category />
           <ItemList items={items} />
         </>
