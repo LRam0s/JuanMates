@@ -16,10 +16,10 @@ const NavBar = () => {
       <NavResponsive menuExtend={menuExtend} toggleMenu={toggleMenu} />
       <div className={estilos.navExtend}>
         <ul className={estilos.links}>
-          <li>
+          <li className={estilos.link}>
             <Link to="/products"> Productos </Link>
           </li>
-          <li>
+          <li className={estilos.link}>
             <Link to="/faq"> Preguntas frecuentess </Link>
           </li>
           <Link to="/" className={estilos.logo}>
@@ -29,10 +29,10 @@ const NavBar = () => {
               alt="Logo de JuanMates Arg"
             />{" "}
           </Link>
-          <li>
+          <li className={estilos.link}>
             <Link to="/about"> Nosotros </Link>
           </li>
-          <li>
+          <li className={estilos.link}>
             <Link to="/contact"> Contacto </Link>
           </li>
         </ul>

@@ -72,7 +72,7 @@ const Cart = () => {
           <>
             <div className={estilos.total}>
               <p> Tu carrito se encuentra vacío</p>
-              <Link to="/">
+              <Link to="/products">
                 <Button btnText="Ir a ver los productos" />
               </Link>
             </div>
@@ -82,7 +82,7 @@ const Cart = () => {
             <div className={estilos.total}>
               <p>Total: $ {totalPrice()} </p>
               <span style={{ display: "flex", gap: "1rem" }}>
-                <Link to="/">
+                <Link to="/products">
                   <Button btnText="Seguir comprando" />
                 </Link>
                 <Button btnText="Borrar carrito" fnButton={clear} />

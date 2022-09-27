@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: solid #b7a986 1px;
+  padding-bottom: 0.8rem;
+}
+
+.list {
+  list-style-image: url(https://res.cloudinary.com/dpsc3qokx/image/upload/c_scale,w_18/v1661265647/JuanMates/icons8-mate-50_guoo8e.png);
+  font-size: 1.1rem;
+}
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 1.2rem;
+}

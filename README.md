@@ -18,6 +18,14 @@ En esta tienda podrán encontrar todos los productos que un amante de los mates 
 
 Puede ingresar a la aplicación ingresando al siguiente link:
 [JuanMates Arg](PONER EL LINK DE NETLIFY)
+Vistas:
+
+- Home: Se encuentra la pantalla de inicio de la aplicación, podrán acceder a las diferentes vistas desde aquí o desde el navBar.
+- Productos: Se encuentran todos los productos página, se puede filtrar por categoría y seleccionar el que desea para ingresar al detalle del mismo y poder agregar la cantidad que quiera al carrito.
+- Preguntas frecuentes: Se encuentran las preguntas frecuentes junto con los términos y condiciones de la página.
+- Nosotros: Se informa como se creo la marca, donde se encuentra y cuales son sus objetivos.
+- Contacto: Se encuentra un formulario de contacto en el cual se puede enviar la consulta que luego sera contestada vía mail. También se encuentran las redes.
+- Carrito: Se encuentran los productos que se agregaron y se realiza la compra.
 
 ## Librerias
 

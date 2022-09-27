@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
   return (
-    <Link to={`./item/${item.id}`}>
+    <Link to={`/products/item/${item.id}`}>
       <div className={estilos.itemContainer}>
         <img src={item.img} alt="" />
         <h3>{item.title}</h3>

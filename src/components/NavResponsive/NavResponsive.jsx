@@ -1,6 +1,7 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import estilos from "../NavBar/NavBar.module.css";
+import { Link } from "react-router-dom";
 
 const NavResponsive = ({ menuExtend, toggleMenu }) => {
   return (
@@ -15,26 +16,27 @@ const NavResponsive = ({ menuExtend, toggleMenu }) => {
         {menuExtend === true && (
           <span className={estilos.linksMateExtend}>
             <li>
-              <a href="https://www.google.com.ar/">Productos</a>
+              <Link to="/products"> Productos </Link>
             </li>
             <li>
-              <a href="https://www.google.com.ar/">Preguntas frecuentes </a>
+              <Link to="/faq"> Preguntas frecuentess </Link>
             </li>
             <li>
-              <a href="https://www.google.com.ar/"> Nosotros </a>
+              <Link to="/about"> Nosotros </Link>
             </li>
             <li>
-              <a href="https://www.google.com.ar/">Contacto</a>
+              <Link to="/contact"> Contacto </Link>
             </li>
           </span>
         )}
       </ul>
-      <a href="https" className={estilos.logo}>
+      <Link to="/" className={estilos.logo}>
+        {" "}
         <img
           src="https://res.cloudinary.com/dpsc3qokx/image/upload/v1661265187/JuanMates/logo_k35yk0.png"
           alt="Logo de JuanMates Arg"
-        />
-      </a>
+        />{" "}
+      </Link>
       <ul className={estilos.cart}>
         <li>
           <CartWidget />

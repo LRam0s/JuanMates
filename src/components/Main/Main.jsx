@@ -1,13 +1,12 @@
 import React from "react";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
-
 import { Route, Routes } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import { ToastContainer } from "react-toastify";
 import Faq from "../FAQ/Faq";
 import About from "../About/About";
-import Contact from "../Contact/Contact";
+import ContactFormContainer from "../ContactFormContainer/ContactFormContainer";
 import Home from "../Home/Home";
 
 const Main = () => {
@@ -31,7 +30,7 @@ const Main = () => {
         <Route path="/products/item/:id" element={<ItemDetailContainer />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<ContactFormContainer />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </main>
