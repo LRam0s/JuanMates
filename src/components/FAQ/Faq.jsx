@@ -47,9 +47,9 @@ const Faq = () => {
               diseño no nos responsabilizamos por el resultado del producto.
             </li>
             <li>
-              FECHAS DE MAYOR DEMANDA EJ: Día DE LA MADRE PEDIR CON BASTANTE
-              TIEMPO DE ANTICIPACIÓN PARA PODER CUMPLIR CON CADA PEDIDO A
-              TIEMPO.
+              FECHAS DE MAYOR DEMANDA (Ej: Día de la madre). Pedir con bastante
+              tiempo de anticipación para poder cumplir con cada pedido a
+              tiempo.
             </li>
           </ul>
         </div>
@@ -66,8 +66,9 @@ const Faq = () => {
               entregar, no lleva productos para elegir.
             </li>
             <li>
-              Hacemos entregas en Lavalleja 45 barrio centro, de 11 am a 19 hs
-              en horario a acordar, de lunes a viernes, sábado de 13 hs a 19 hs.
+              Hacemos entregas en Lavalleja 45 Barrio centro, de 11:00 hs a
+              19:00 hs en horario a acordar, de lunes a viernes, sábado de 13:00
+              hs a 19:00 hs.
             </li>
             <li>
               Pueden enviar un cadete/comisionista a retirar su pedido y que
@@ -153,7 +154,7 @@ const Faq = () => {
               y esto significa que ningúna es igual a la otra. Las imágenes que
               observa en nuestra tienda son referenciales al modelo que desee
               adquirir, lo cual no quiere decir que sea enviado exactamente el
-              mismo (tamaño color y forma)
+              mismo (tamaño color y forma).
             </li>
             <li>
               El comprador puede elegir el producto por su cuenta en nuestro

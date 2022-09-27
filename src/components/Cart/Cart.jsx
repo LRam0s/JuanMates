@@ -1,11 +1,9 @@
-import React from "react";
-import { useContext } from "react";
+import { React, useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import estilos from "./Cart.module.css";
 import Button from "../Button/Button";
 import { BsTrash } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import FormContainer from "../FormContainer/FormContainer";
 import Space from "../Space/Space";
 import CheckoutID from "../CheckoutID/CheckoutID";

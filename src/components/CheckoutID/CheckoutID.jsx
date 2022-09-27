@@ -2,7 +2,6 @@ import React from "react";
 import estilos from "./CheckoutID.module.css";
 
 const CheckoutID = ({ idCompra }) => {
-  console.log(idCompra);
   return (
     <section style={{ display: "flex", justifyContent: "center" }}>
       <div className={estilos.finally}>

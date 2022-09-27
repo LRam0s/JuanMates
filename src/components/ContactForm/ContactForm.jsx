@@ -18,10 +18,10 @@ const ContactForm = ({
       <form action="" onSubmit={validateForm} className={estilos.container}>
         <h2>Formulario de contacto</h2>
         <div className={estilos.campos}>
-          <label htmlFor="nombre">Nombre completo: </label>
+          <label htmlFor="name">Nombre completo: </label>
           <input
             type="text"
-            name="nombre"
+            name="name"
             value={name}
             onChange={handleChangeName}
           />
@@ -30,7 +30,7 @@ const ContactForm = ({
           <label htmlFor="email">Ingrese su correo electrónico: </label>
           <input
             type="email"
-            name="email1"
+            name="email"
             value={email}
             onChange={handleChangeEmail}
           />

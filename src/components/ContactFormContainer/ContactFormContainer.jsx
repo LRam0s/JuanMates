@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import { React, useState } from "react";
 import Space from "../Space/Space";
 import { toast } from "react-toastify";
 import { dataBase } from "../../firebaseConfig";

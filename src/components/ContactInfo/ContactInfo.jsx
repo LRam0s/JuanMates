@@ -30,7 +30,6 @@ const ContactInfo = () => {
           <article className={estilos.contactInfo}>
             <FaWhatsapp size={60} color={"green"} />
             <a href="https://api.whatsapp.com/send?phone=PPNNNNNNNNN">
-              {" "}
               Hace click acá para chatear con nosotros
             </a>
           </article>
