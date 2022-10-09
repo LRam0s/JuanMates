@@ -26,3 +26,9 @@
   width: 15em;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 850px) {
+  .socialMedia {
+    gap: 4rem;
+  }
+}

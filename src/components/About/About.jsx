@@ -20,8 +20,9 @@ const About = () => {
         </div>
         <div className={estilos.about1}>
           <img
-            src="https://res.cloudinary.com/dpsc3qokx/image/upload/c_scale,w_600/v1664219768/JuanMates/canada_yd9to2.jpg"
+            src="https://res.cloudinary.com/dpsc3qokx/image/upload/v1664219768/JuanMates/canada_yd9to2.jpg"
             alt=""
+            style={{ width: "100%", maxWidth: "550px" }}
           />
           <article
             style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
@@ -51,6 +52,7 @@ const About = () => {
           <img
             src="https://res.cloudinary.com/dpsc3qokx/image/upload/c_scale,h_453/v1664219767/JuanMates/matecanada_iyexrc.jpg"
             alt=""
+            style={{ width: "100%", maxWidth: "320px" }}
           />
           <article
             style={{ display: "flex", flexDirection: "column", gap: "1rem" }}

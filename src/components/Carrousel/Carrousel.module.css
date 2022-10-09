@@ -16,6 +16,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .textContainer {
@@ -34,10 +35,16 @@
 }
 
 .carrouselImg {
-  max-width: 420px;
+  max-width: 400px;
   width: 100%;
   height: auto;
-  max-height: 426px;
+  max-height: 415px;
+}
+.carrouselImgPpal {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  max-height: 415px;
 }
 
 .button {
@@ -46,4 +53,19 @@
 }
 polyline {
   stroke: #0000004e;
+}
+
+@media screen and (max-width: 1400px) {
+  .button {
+    display: none;
+  }
+}
+@media screen and (max-width: 835px) {
+  .carrouselImg {
+    display: none;
+  }
+  .carrouselImgContainer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }

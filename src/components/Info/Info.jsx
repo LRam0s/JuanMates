@@ -7,14 +7,17 @@ const Info = () => {
       <img
         src="https://res.cloudinary.com/dpsc3qokx/image/upload/v1661430256/JuanMates/info/envios_zptffp.jpg"
         alt=""
+        className={estilos.imgContainer}
       />
       <img
         src="https://res.cloudinary.com/dpsc3qokx/image/upload/v1661430256/JuanMates/info/pagos_oqjsvy.jpg"
         alt=""
+        className={estilos.imgContainer}
       />
       <img
         src="https://res.cloudinary.com/dpsc3qokx/image/upload/v1661430256/JuanMates/info/personalizado_fsnrpq.jpg"
         alt=""
+        className={estilos.imgContainer}
       />
     </section>
   );

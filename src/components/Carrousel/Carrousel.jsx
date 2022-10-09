@@ -68,7 +68,7 @@ const Carrousel = (autoPlay = true) => {
               alt=""
             />
             <img
-              className={estilos.carrouselImg}
+              className={estilos.carrouselImgPpal}
               src={selectedImage[1]}
               alt=""
             />

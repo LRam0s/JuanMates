@@ -5,3 +5,13 @@
   gap: 2rem;
   padding: 2rem;
 }
+
+.imgContainer {
+  max-width: 444px;
+}
+
+@media screen and (max-width: 420px) {
+  .imgContainer {
+    max-width: 315px;
+  }
+}

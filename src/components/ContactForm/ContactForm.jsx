@@ -47,7 +47,7 @@ const ContactForm = ({
         <div className={estilos.campos}>
           <label htmlFor="message">Ingrese su mensaje: </label>
           <textarea
-            style={{ width: "400px", height: "200px" }}
+            style={{ width: "230px", height: "200px" }}
             type="text"
             name="message"
             value={message}

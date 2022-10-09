@@ -108,3 +108,37 @@
 .gItem8:hover {
   transform: scale(105%);
 }
+
+@media screen and (max-width: 1160px) {
+  .gItem0 {
+    display: none;
+  }
+
+  .gItem1 {
+    display: none;
+  }
+  .gItem2 {
+    display: none;
+  }
+  .gItem3 {
+    display: none;
+  }
+  .gItem5 {
+    display: none;
+  }
+  .gItem6 {
+    display: none;
+  }
+  .gItem7 {
+    display: none;
+  }
+  .gItem8 {
+    display: none;
+  }
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
