@@ -79,7 +79,14 @@ const Cart = () => {
           <>
             <div className={estilos.total}>
               <p>Total: $ {totalPrice()} </p>
-              <span style={{ display: "flex", gap: "1rem" }}>
+              <span
+                style={{
+                  display: "flex",
+                  gap: "1rem",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
                 <Link to="/products">
                   <Button btnText="Seguir comprando" />
                 </Link>

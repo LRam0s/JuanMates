@@ -5,13 +5,14 @@
 
 .itemContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   align-items: center;
   margin-top: 2rem;
   max-width: 600px;
   border: 2px solid rgb(112, 112, 112);
-  padding: 2rem;
+  padding: 1rem;
 }
 .itemDetail {
   display: flex;

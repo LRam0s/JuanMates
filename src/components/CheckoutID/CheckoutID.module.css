@@ -8,3 +8,13 @@
   max-width: 1000px;
   padding: 2rem;
 }
+
+.text {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 450px) {
+  .text {
+    font-size: 20px;
+  }
+}
