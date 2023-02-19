@@ -11,7 +11,7 @@
 
 ![](https://res.cloudinary.com/dpsc3qokx/image/upload/v1661265187/JuanMates/logo_k35yk0.png)
 
-La aplicación web de JuanMates Arg es un Ecommerce que ha sido realizado con React JS en el curso homónimo de Coderhouse.
+La aplicación web de JuanMates Arg es un Ecommerce que ha sido realizado con React JS, Javascript, HTML, Css. Se ha utilizado Firebase como base de datos que almacena los productos.
 En esta tienda podrán encontrar todos los productos que un amante de los mates necesita, desde termos personalizados hasta canastas materas en las cuales llevar todos los productos. Podrán navegar por las diferentes vistas que componen la aplicación, tales como el home, la sección de productos, de preguntas frecuentes, de contacto y de sobre Nosotros.
 
 ## Deployment
